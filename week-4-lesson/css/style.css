@@ -1,0 +1,127 @@
+/*
+Colors:
+#f6f4e8
+#bacec1
+#e59560
+#1d3124
+*/
+body{
+  background-color: #f8f8f8;
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-areas:
+          'header header header header'
+          'hero hero hero hero'
+          'main main main aside'
+          'footer footer footer footer';
+  grid-template-rows: auto;
+}
+h1,h2,h3,h4,h5,h6{
+ font-family: "Montserrat", sans-serif;
+}
+p,a,li,figcaption,td,blockquote{
+  font-size: 1.2em;
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+}
+/* Header */
+header{
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  height: 150px;
+  background-color: #f6f4e8;
+}
+header div{
+  flex-grow: 1;
+  width: auto;
+  height: 125px;
+}
+header div img{
+  width: auto;
+  height: 100%;
+}
+header menu{
+  list-style: none;
+  display: flex;
+  /* if you are not using reset.css */
+  padding-left: 0;
+  margin: 0;
+}
+header menu li{
+  padding: 0 10px;
+}
+.lesson-masthead{
+  grid-area: hero;
+  display: grid;
+  grid-template-columns: 75% 25%;
+  height: 75vh;
+}
+.lesson-masthead div:nth-child(1){
+  background-image: url("../img/10.jpg");
+  background-size: cover;
+  background-position: bottom;
+}
+.lesson-masthead div:nth-child(2){
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.lesson-masthead div:nth-child(2) h1{
+  font-size: 3em;
+  color: #0e0e0e;
+  margin-bottom: 15px;
+}
+.lesson-masthead div:nth-child(2) a{
+  background-color: #e59560;
+  padding: 15px 25px;
+  border: solid 2px #e59560;
+  color: #f8f8f8;
+  border-radius: 5px;
+  width: 40%;
+  margin: 0 auto;
+}
+/* main */
+main{
+  grid-area: main;
+}
+main section:nth-child(1) div img,
+main section:nth-child(2) div img{
+  width: 100%;
+  height: auto;
+}
+main section:nth-child(1) h3,
+main section:nth-child(2) h3{
+  font-size: 2.5em;
+}
+main section:nth-child(1),
+main section:nth-child(2){
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+main section:nth-child(3) {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+main section:nth-child(3) img{
+  width: 100%;
+  height: auto;
+}
+aside{
+  grid-area: aside;
+}
+aside article{
+  width: 90%;
+  margin: auto;
+}
+aside article img{
+  width: 100%;
+  height: auto;
+}
+footer{
+  grid-area: footer;
+}
+
+
+
