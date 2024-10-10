@@ -1,0 +1,59 @@
+/** Simple Selector **/
+html{
+  scroll-behavior: smooth;
+}
+body{
+  margin: 0px;
+}
+header{
+  display: flex;
+  height: 125px;
+  align-items: center;
+  padding: 0 10px;
+}
+footer{
+  text-align: center;
+}
+/** Combinators **/
+header > div{
+  width: auto;
+  height: 100px;
+  flex-grow: 1;
+}
+header > div > a > img{
+  width: auto;
+  height: 100%;
+}
+header + main > section:first-child{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/** Contextual **/
+header menu{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+}
+header menu li{
+  padding: 0 10px;
+}
+/** Grouped **/
+h1,h2,h3,h4,h5,h6{
+  font-family: Arial;
+}
+/** class **/
+.masthead{
+  height: 100vh;
+  background-color: #072d67;
+}
+/** id **/
+#row-1{
+  color: #f8f8f8;
+}
+/** structural pseudo-classes **/
+main > section + section > div:nth-child(2){
+  background-color: #f9a825;
+  padding: 5%;
+}
